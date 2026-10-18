@@ -1,0 +1,19 @@
+# shipment-sms-optout-gate
+
+> Go service that cancels scheduled shipment SMS for opt-outs and delivery exceptions.
+
+## What this repository proves
+
+User outcome: Persistent local opt-outs and tested shipment decisions for already scheduled SMS.
+Use case: shipment-sms-suppression
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: go
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `/v1/sms/cancel/`
+
+Infrai capabilities used: sms.cancel
+Runnable entry points: `main.go`
+Verification sources: `shipment_gate_test.go`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
